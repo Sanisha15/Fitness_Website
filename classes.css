@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.classes-first-box{
+    background-image: url(images/Rectangle55.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    position: relative;
+    text-align: center; 
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.classes-first-heading1 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.classes-first-heading1 img
+{
+    height: 30px;
+    position: relative;
+    margin-top: 15vh;    
+}
+.classes-first-heading2
+{
+    position: relative;
+    width: 250px;
+    height: 5px;
+    background-color: white;
+    margin-top: 30px;
+}
+.classes-inner-first-box
+{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;    
+    margin: 0;
+
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    grid-gap: 5px;
+}
+.col
+{
+    height: 400px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Ubuntu;
+    /* border: 1px solid black; */
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    width: 300px;
+   
+    color: #FFA500;
+    font-size: 30px;
+
+}
+.first-img-row 
+{
+    padding: 10px;
+    margin-top: 4%;
+    height: 300px;
+}
+
+.col p{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.first-btn
+{
+    height: auto;
+    width: auto;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: 5%;
+    background-color: red;
+    color: white;
+    border: none;
+}
+.first-btn:hover{
+    background-color: rgb(181, 48, 48);
+}
+
+/* --------------second-box-------------------------------- */
+.class-second-box
+{
+    background-color: #f5d598;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    text-align: center; 
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+.class-second-box-heading
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.class-second-box-heading img{
+    height: 30px;
+    position: relative;
+    margin-top: 5vh;  
+}
+.class-second-box-heading2
+{
+    position: relative;
+    width: 350px;
+    height: 3px;
+    background-color: black;
+    margin-top: 5px;
+}
+.class-second-box-columns
+{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;    
+    margin: 0;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5px;
+}
+.class-second-flex-box
+{
+    height: 300px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Ubuntu;
+    /* border: 1px solid black; */
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    width: 300px;
+   
+    color: #FFA500;
+    font-size: 30px;
+    
+}
+.c-s-col{
+   
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 1)); 
+    padding:0px;
+    padding-bottom: 1px;
+    margin-top: 10%;
+    height: 270px;
+}
+.second-btn
+{
+    height: auto;
+    width: auto;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: 5%;
+    background-color: #4D4848;
+    color: white;
+    border: none;
+}
+.second-btn:hover{
+    background-color: #6c6868;
+}
+
+/* ------------------------third-box----------------- */
+.class-third-box
+{
+    background-image: url(images/Rectangle53.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+  
+}

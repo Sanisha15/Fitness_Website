@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body
+{
+    overflow-x: hidden;
+}
+.logo{
+    margin-top: 29px;
+    height: 79px;
+    width: 201px;
+    left: 39px;
+}
+.header
+{
+    padding: 0 4.8rem;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#524D4D;
+
+
+}
+
+.navbar-list
+{
+    display: flex; 
+    gap: 4.8rem;
+    list-style: none;
+}
+
+.navbar_link:link,
+.navbar_link:visited {
+    font-family: "Poppins", sans-serif;
+     display: flex;
+     text-decoration: none;
+     line-height: 42px;
+     font-size: 28px;
+     font-weight: 300;
+     color: #ffffff;
+     transition: all 0.1s;
+}
+
+.navbar_link:hover, 
+.navbar_link:active{
+    color: rgb(244, 212, 130);
+}
+
+.sign-in-btn{
+    width: 126px;
+    height: 57px;
+    font-family: "Ubuntu", sans-serif;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #FFA500;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 42px;
+}
+/* Mobile-section */
+.mobile-nav-btn{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 999;
+    color: black;
+}
+.mobile-nav-icon{
+    width: 4rem;
+    height: 4rem;
+
+}
+
+.mobile-nav-icon[name="close-outline"]
+{
+    display: none;
+}
+
+
+/* Responsive navbar */
+/* 980px */
+/* 1em = 16px */
+
+@media(max-width: 900px){
+    .mobile-nav-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid black;
+        color: black;
+    }
+    
+    .navbar{
+        /* hiding the icons in mobile version */
+        width: 100%;
+        height: 70vh;
+        background-color: rgb(195, 154, 114);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* to get the transition */
+        transform: translateY(0);
+        transition: top;
+       
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 100;
+
+    }
+
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+   
+    }
+
+    .active .navbar{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      
+    }
+    .navbar_link:hover, 
+    .navbar_link:active{
+    color: rgb(244, 212, 130);
+    }
+
+    
+    .active .mobile-nav-btn .mobile-nav-icon[name="close-outline"]{
+        z-index: 999;
+        display: block;
+    }
+    .active .mobile-nav-btn .mobile-nav-icon[name="menu-outline"]{
+        display: none;
+    }
+
+
+}
+
+/* First box */
+
+.first-img {
+    background-image: url("images/first_img.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    position: relative;
+    text-align: center; /* Center aligning the text */
+}
+
+.first-img-para {
+    color: white;
+    font-family: "Radio Canada", sans-serif;
+    font-size: 8.5rem;
+    font-weight: 700;
+    line-height: 90px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.first-img-second-para {
+    color: white;
+    font-family: "Radio Canada", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    width: 421px;
+    margin-top: 20px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* buttons on first box */
+
+.btn
+{
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.196);
+    border: 0.5px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 207px;
+    height: 56px;
+}
+
+.btn-yellow
+{
+    background-color: #FFA500;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 2px solid #FFA500;
+}
+.btn-transparent
+{
+    background-color: rdba(51, 170, 51, .1);
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 2px solid #FFA500;
+}
+.btn-transparent:hover{
+    background-color: rgb(244, 197, 111);
+}
+.btn-yellow:hover{
+    background-color: rgb(244, 197, 111);
+}
+.hero-buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.arrow{
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+@media(max-width: 900px) {
+    
+    .first-img{
+        height: 700px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .first-img-para {
+        font-size: 6rem;
+        
+    }
+
+    .first-img-second-para {
+        font-size: 2rem;
+        left: 58%;
+    }
+
+    .btn{
+        width: 150px;
+        height: 46px;
+        font-weight: 300;
+        font-size: 16px;
+        
+    }
+}
+
+/* Polygon box */
+.polygon-box
+{
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    border: 2px solid white;
+    height: 60px;
+    width: 250px;
+    background-color: rgba(255, 165, 0, 1);
+    position:absolute;
+    top: 765px;
+    left: 0;
+    padding: 10px;
+    align-items: center;
+    justify-self: center;
+}
+.polygon-box-logo
+{
+    height: 25px;
+    width: 26px;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+.polygon-box-logo:hover{
+    background-color: #956c1f89;
+}
+
+/* Second box */
+
+.second-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.six-pictures {
+    
+    display: grid;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.second-box .six-pictures   {
+    width: 80%;
+  }
+
+.img{
+    padding: 15px;
+    width: 90px;
+    height: 90px;
+}
+.icon-para
+{
+    padding: 10px;
+    padding-top: 0;
+    font-size: 25px;
+    font-family: Ubuntu;
+}
+.img1  {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+.img2  {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+.img3  {
+    border-bottom: 2px solid black;
+}
+.img4  {
+
+    border-right: 2px solid black;
+}
+.img5  {
+
+    border-right: 2px solid black;
+}
+
+.icon-btn {
+    border-radius: 60%;
+    border: none; 
+    background: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+
+.icon-btn img {
+    display: block; 
+}
+
+.icon-btn:hover, .icon-btn:focus {
+    outline: 2px solid #000; 
+    outline-offset: 2px; 
+}
+
+/*----------------------- third_box.css----------- */
+
+/*--------------------- fourth box----------------------  */
+
+.fourth-box{
+    background-image: url(images/fitness-club.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 100%;
+}
+
+/* -------------------------fifth box------------------- */
+.fifth-box
+{
+    background-color: #FFA500;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fifth-box-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -5%;
+}
+.inner-white-box{
+    display: flex;
+    background-color: white;
+    height: 300px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 10%;
+    margin-top: -400px;
+}
+
+.fifth-box-column
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 20px;
+
+}
+
+.fifth-box-row::after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.fifth-box-column h2 {
+   
+    font-family: Ubuntu;
+    font-size: 20px;
+    margin: 10px 0; 
+    text-align: center;
+}
+
+.fifth-box-column p {
+    font-family: Ubuntu;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .inner-white-box {
+        width: 90%;
+    }
+
+    .fifth-box-row {
+        
+        justify-content: center; 
+    }
+
+    .fifth-box-column {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+}
+
+/* --------------------------Sixth box---------------------------- */
+.sixth-box {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly with equal space around them */
+    align-items: center; /* Center items vertically */
+    background-color: black;
+    height: 400px; /* Adjust height as needed */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.sixth-flex-box {
+    text-align: center;
+}
+
+.sixth-flex-box img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: 300px; /* Maintain aspect ratio */
+    width: 300px;
+}
+
+.sixth-flex-box p{
+    color: #FFA500;
+    font-family: Ubuntu;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .sixth-flex-box {
+        text-align: left;
+        width: 90%; 
+    }
+}
+
+/*------------------------- Seventh-box------------------- */
+.seventh-box {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: #524D4D;
+    height: 250px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    
+
+}
+
+
+.seventh-block{
+    height: 250px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Ubuntu;
+    /* border: 1px solid black; */
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+
+}
+
+
+.first-block img {
+    margin-top: 10%;
+    max-width: 100%;
+    height: auto;
+}
+
+.first-block p {
+    color: #FFA500; 
+    font-size: 20px;
+    justify-content: center;
+}
+.second-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text in table cells */
+}
+
+.second-block table {
+   
+    width: 40%;
+    color: white;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.second-block th, .second-block td {
+ 
+    padding: 15px; 
+    text-align: center; 
+}
+
+.second-block th {
+    font-size: 20px;
+    color: white; 
+}
+.third-block{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .third-block .block{
+
+    width: 48%; 
+    color: white;
+    padding: 20px; 
+
+} */
+.third-block h2{
+    color: #FFA500;
+    margin-bottom: 10px;
+    
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.third-block .tags {/* Heading color */
+
+    display: grid;
+    text-transform: uppercase;
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
+    
+}
+
+.third-block .tags .tag {
+    background-color: #FFA500; 
+    color: white;
+    width: 50px; height: 30px;
+    width: auto;
+    text-align: center;
+    padding: 5px 10px;
+
+}
+@media (max-width: 900px) {
+   
+    .seventh-box{
+      
+            width: 100%;
+            height: auto;
+            display: flex;
+            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px; */
+            flex-direction: row;
+            justify-content: space-around;
+            flex-flow: wrap;
+            align-items: center;
+        
+    }
+    .first-block, .second-block, .third-block {
+        width: 100%;
+        
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+  
+}
+
+.eight-box
+{
+    background-color: #FFA500;
+    font-family: Ubuntu;
+    height: 80px;
+    width: 100%;
+    font-weight: 700;
+    color: black; 
+    text-align: center;
+    padding-top: 15px;
+    font-size: 25px;
+    box-sizing: border-box;
+    position: absolute;
+}

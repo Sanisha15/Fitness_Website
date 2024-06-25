@@ -1,0 +1,86 @@
+
+.third-box
+{
+    background-image: url(images/anastase-marago.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    /* position: relative; */
+    text-align: center; 
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+.main-third-heading
+{
+    margin: 5%;
+}
+.third-container
+{
+
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;    
+    margin: 0;
+
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    grid-gap: 5px;
+  
+}
+
+.column {
+    height: 400px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Ubuntu;
+    /* border: 1px solid black; */
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 300px;
+    /* float: left;
+    width: 30%;
+    height: 400px; 
+    margin: 0 10px;
+    box-sizing: border-box;
+    padding: 20px;  */
+    color: #FFA500;
+    font-size: 30px;
+
+    /* width: 100%; */
+  }
+  .column h3, .column p{
+    margin: 10px 0;
+  }
+  
+
+.third-btn
+{
+    font-weight: 400;
+    
+}
+
+@media (max-width: 900px) {
+    .third-box
+    {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
+        align-items: center;
+
+    }
+
+   
+    .column {
+      margin-bottom: 20px;
+    }
+ 
+  }
