@@ -1,0 +1,1 @@
+I created a fitness website using HTML, CSS, and JavaScript. The site includes several features, such as a responsive navigation bar and a "Join Us" button. Additionally, I integrated pages for "Classes" and "Products," allowing users to explore these sections by navigating to new webpages.
